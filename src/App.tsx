@@ -1,14 +1,19 @@
-import Input from "./components/Input";
-import User from "./components/User";
-
+import { useState } from "react";
+import UserForm from "./components/UserForm";
 
 function App() {
+  const [enteredUsername, setEnteredUsername] = useState('');
+  const [enteredAge, setEnteredAge] = useState(0);
+
+  const fetchUserDataHandler = (username: string, age: number) => {
+    setEnteredUsername(username);
+    setEnteredAge(age);
+  }
+
+  console.log(enteredUsername, enteredAge);
+
   return (
-    <>
-      <User username="Willian Andrade" age={23} />
-      <Input type="text" label="Username" onChangeHandler={() => console.log('username works!')} /> 
-      <Input type="number" label="Age" onChangeHandler={() => console.log('age works!')} />
-    </>
+    <UserForm fetchUserData={fetchUserDataHandler} />
   );
 };
 
