@@ -6,7 +6,7 @@ const UserForm = ({ fetchUserData }: UserFormType): JSX.Element => {
   const onSubmitHandler = (e: React.SyntheticEvent) => {
     e.preventDefault();
 
-    if (!e.target.username.value.trim().length && !e.target.age.value.trim().length) {username
+    if (!e.target.username.value.trim().length && !e.target.age.value.trim().length) {
       return console.log('Please enter a valid name and age (non-empty values).');
     }
     
