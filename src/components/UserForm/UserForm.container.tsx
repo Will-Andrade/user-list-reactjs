@@ -1,3 +1,4 @@
+import Modal from "@/components/UI/Modal";
 import UserFormComponent, { UserFormProps } from "./UserForm.component";
 
 type UserFormType = Pick<UserFormProps, 'fetchUserData'>;
@@ -7,15 +8,15 @@ const UserForm = ({ fetchUserData }: UserFormType): JSX.Element => {
     e.preventDefault();
 
     if (!e.target.username.value.trim().length && !e.target.age.value.trim().length) {
-      return console.log('Please enter a valid name and age (non-empty values).');
+      return <Modal title="Form Error!" content="Please enter a valid name and age (non-empty values)." /> 
     }
     
     if (Number(e.target.age.value) < 0 || !e.target.age.value.trim().length) {
-      return console.log('Please enter a valid age (>0).');
+      return <Modal title="Age error!" content="Please enter a valid age (>0)." />
     }
 
     if (!e.target.username.value.trim().length) {
-      return console.log('Please enter a valid name.');
+      return <Modal title="Username error!" content="Please enter a valid name." />
     }
 
     fetchUserData(e.target.username.value, e.target.age.value)

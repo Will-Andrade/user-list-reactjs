@@ -1,4 +1,4 @@
-import UserList from "@/components/UserList";
+import UserList from "./components/UserList";
 import { useState } from "react";
 import UserForm from "./components/UserForm";
 
