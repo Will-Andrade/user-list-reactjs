@@ -1,4 +1,6 @@
 import User from "@/components/User";
+import Card from "@/components/UI/Card";
+import * as Styles from './UserList.styles';
 
 interface User {
   username: string;
@@ -12,11 +14,11 @@ export type UserListComponentProps = {
 
 const UserListComponent = ({ users }: UserListComponentProps): JSX.Element => {
   return (
-    <>
-      <ul>
+    <Card>
+      <Styles.UserList>
         {users.map(({ username, age, id }) => <User username={username} age={age} key={id} />)}
-      </ul>
-    </>
+      </Styles.UserList>
+    </Card>
   );
 };
 

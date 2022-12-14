@@ -1,3 +1,4 @@
+import * as Styles from './Input.styles';
 export interface InputComponentProps {
   label: string;
   type: string;
@@ -8,10 +9,10 @@ const InputComponent = ({
   type, 
 }: InputComponentProps): JSX.Element => {
   return (
-    <label>
+    <Styles.Label>
       {label}
-      <input type={type} name={label.toLowerCase()} />
-    </label>
+      <Styles.Input type={type} name={label.toLowerCase()} />
+    </Styles.Label>
   );
 };
 

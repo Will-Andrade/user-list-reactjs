@@ -7,10 +7,7 @@ export interface UserProps {
 
 const UserComponent = ({ username, age }: UserProps): JSX.Element => {
   return (
-    <Styles.User>
-      <p>{username}</p>
-      <p>{age}</p>
-    </Styles.User>
+    <Styles.User><p>{username}, {age} years old.</p></Styles.User>
   );
 };
 
