@@ -1,6 +1,7 @@
 import UserList from "./components/UserList";
 import { useState } from "react";
 import UserForm from "./components/UserForm";
+import { Container } from "./components/styles";
 
 interface User {
   username: string;
@@ -16,10 +17,10 @@ function App() {
   }
 
   return (
-    <>
+    <Container>
       <UserForm fetchUserData={fetchUserDataHandler} />
       {enteredData.length > 0 && <UserList users={enteredData} />}
-    </>
+    </Container>
   );
 };
 
