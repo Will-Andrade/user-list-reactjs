@@ -1,5 +1,5 @@
-import ButtonComponent from "@/components/Button";
-import Input from "@/components/Input";
+import ButtonComponent from "@/components/UI/Button";
+import Input from "@/components/UI/Input";
 
 export interface UserFormProps {
   onSubmitHandler: (e: React.SyntheticEvent) => void;
