@@ -7,6 +7,10 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+  background: #2b3555;
 }
 
 li {
@@ -19,4 +23,15 @@ a {
 
 html, body, #root {
   height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 5rem;
 }
