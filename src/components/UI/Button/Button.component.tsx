@@ -1,10 +1,21 @@
+import * as Styles from './Button.styles';
+
 interface ButtonComponentProps {
   type: "button" | "submit" | "reset" | undefined;
-  children?: React.ReactNode 
+  children?: React.ReactNode;
+  onClickHandler?: () => void;
 };
 
-const ButtonComponent = ({ type, children }: ButtonComponentProps): JSX.Element => {
-  return <button type={type}>{children}</button>
+const ButtonComponent = ({ 
+  type, 
+  children, 
+  onClickHandler 
+}: ButtonComponentProps): JSX.Element => {
+  return (
+    <Styles.Button type={type} onClick={onClickHandler}>
+      {children}
+    </Styles.Button>
+  );
 };
 
 export default ButtonComponent;
