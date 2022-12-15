@@ -12,9 +12,13 @@ interface User {
 function App() {
   const [enteredData, setEnteredData] = useState<User[]>([]);
 
-  const fetchUserDataHandler = (username: string, age: number) => {
-    setEnteredData(prevState => [...prevState, { username, age, id: `user${Math.round(Math.random() * 100)}` }])
-  }
+  const fetchUserDataHandler = (username: string, age: number): void => {
+    setEnteredData(prevState => 
+      [...prevState, 
+        { username, age, id: `user${Math.round(Math.random() * 100)}` }
+      ]
+    );
+  };
 
   return (
     <Container>

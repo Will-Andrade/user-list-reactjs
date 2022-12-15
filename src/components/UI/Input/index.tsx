@@ -1,3 +1,3 @@
-import Input from "./Input.container";
+import Input from "./Input.component";
 
 export default Input;

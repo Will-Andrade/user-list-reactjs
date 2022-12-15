@@ -1,4 +1,4 @@
-import ButtonComponent from "@/components/UI/Button";
+import Button from "@/components/UI/Button";
 import Input from "@/components/UI/Input";
 import Card from "@/components/UI/Card";
 import * as Styles from './UserForm.styles';
@@ -14,7 +14,7 @@ const UserFormComponent = ({ onSubmitHandler }: UserFormProps): JSX.Element => {
       <Styles.Form onSubmit={onSubmitHandler}>
         <Input type="text" label="Username" /> 
         <Input type="number" label="Age" />
-        <ButtonComponent type="submit">Add User</ButtonComponent>
+        <Button type="submit">Add User</Button>
       </Styles.Form>
     </Card>
   );

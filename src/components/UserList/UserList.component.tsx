@@ -8,7 +8,7 @@ interface User {
   id: string;
 };
 
-export type UserListComponentProps = {
+type UserListComponentProps = {
   users: User[];
 }
 
@@ -16,7 +16,9 @@ const UserListComponent = ({ users }: UserListComponentProps): JSX.Element => {
   return (
     <Card>
       <Styles.UserList>
-        {users.map(({ username, age, id }) => <User username={username} age={age} key={id} />)}
+        {users.map(({ username, age, id }) => 
+          (<User username={username} age={age} key={id} />)
+        )}
       </Styles.UserList>
     </Card>
   );

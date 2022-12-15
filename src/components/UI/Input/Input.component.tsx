@@ -1,5 +1,5 @@
 import * as Styles from './Input.styles';
-export interface InputComponentProps {
+interface InputComponentProps {
   label: string;
   type: string;
 };
@@ -9,7 +9,7 @@ const InputComponent = ({
   type, 
 }: InputComponentProps): JSX.Element => {
   return (
-    <Styles.Label>
+    <Styles.Label htmlFor={label.toLowerCase()}>
       {label}
       <Styles.Input type={type} name={label.toLowerCase()} />
     </Styles.Label>

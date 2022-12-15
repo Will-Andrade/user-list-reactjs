@@ -1,6 +1,6 @@
 import * as Styles from './User.styles';
 
-export interface UserProps {
+interface UserProps {
   username: string;
   age: number;
 }
